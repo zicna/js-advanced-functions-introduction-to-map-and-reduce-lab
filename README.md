@@ -50,14 +50,22 @@ in this `Array` by `-1`, returning a new `Array` of the input `Array`
 
 ## Define `reduce`
 
-As mentioned in the "Character of Collection Processing," we need to visit each
-member of a collection. This is common to all collection-processing methods. In
-the case of `reduce`, we're going to accumulate the results of the "work" to
-produce a new, single value. An example would be "sum up an `Array` of
-numbers." You combine each element into the new aggregate total by updating the
-aggregate by using an expression like `return total + currentElement`. This
-updating an aggregator value and returning it at the end is the essence of
-_reduce_.
+As mentioned in the "Character of Collection Processing," we need to visit
+each member of a collection. This is common to all collection-processing
+methods. In the case of `reduce`, we start with an initial value that we'll
+call the "memo" or "aggregator." Then we do some "work" involving the element
+and the `memo` and that work updates the `memo`.
+
+This is complex language that describes something we do all the time: make a
+running total. When we enter a grocery store, our `memo` is `0.00`. As we add
+items to our cart, each item's value updates the running total (the `memo`)
+thus changing it. Or imagine if someone "spells out" a word for you. Your
+initial `memo` is an empty `String` of `""`, but as someone spells `["C",
+"a", "t"]` you aggregate each letter to the `memo` and, at the end, its value
+is `"Cat"`.
+
+This updating an aggregator value and returning it at the end is the essence
+of _reduce_.
 
 The `reduce` function should be given a starting point as an argument.
 
@@ -92,6 +100,6 @@ Use the `learn` command to guide you until you get all the tests passing.
 
 ## Conclusion
 
-In this lab you've created your own implementation of methods that work like
+In this lab, you've created your own implementation of methods that work like
 two of the most powerful Enumerable methods: `map` and `reduce`. You've also
 experienced some of the non-DRY code that this requires.
