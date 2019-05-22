@@ -82,7 +82,7 @@ methods and put them in `index.js`:
 ### `map`-like
 
 - `mapToNegativize(sourceArray)`
-- `mapToNo_change(sourceArray)`
+- `mapToNoChange(sourceArray)`
 - `mapToDouble(sourceArray)`
 - `mapToSquare(sourceArray)`
 
